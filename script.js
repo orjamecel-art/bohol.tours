@@ -1,51 +1,206 @@
-// OPEN MODAL
-function openPackage(packageType) {
-    const modal = document.getElementById('packageModal');
-    const details = document.querySelectorAll('.package-details');
+/* =========================
+   PACKAGE MODAL
+========================= */
 
-    // Hide all package details first
-    details.forEach(detail => {
-        detail.style.display = 'none';
+const packageModal =
+    document.getElementById("packageModal");
+
+const packageSections = [
+    document.getElementById("countrysidePackage"),
+    document.getElementById("islandPackage"),
+    document.getElementById("panglaoPackage")
+];
+
+
+function openPackage(packageName) {
+
+    packageSections.forEach(section => {
+
+        section.classList.remove("active");
+
     });
 
-    // Show selected package
-    if (packageType === 'countryside') {
-        document.getElementById('countrysidePackage').style.display = 'block';
-    } else if (packageType === 'island') {
-        document.getElementById('islandPackage').style.display = 'block';
-    } else if (packageType === 'panglao') {
-        document.getElementById('panglaoPackage').style.display = 'block';
+
+    if (packageName === "countryside") {
+
+        document
+            .getElementById("countrysidePackage")
+            .classList.add("active");
+
     }
 
-    modal.style.display = 'flex';
+
+    if (packageName === "island") {
+
+        document
+            .getElementById("islandPackage")
+            .classList.add("active");
+
+    }
+
+
+    if (packageName === "panglao") {
+
+        document
+            .getElementById("panglaoPackage")
+            .classList.add("active");
+
+    }
+
+
+    packageModal.classList.add("show");
+
+    document.body.style.overflow = "hidden";
 }
 
-// CLOSE MODAL
+
+/* =========================
+   CLOSE PACKAGE
+========================= */
+
 function closePackage() {
-    document.getElementById('packageModal').style.display = 'none';
+
+    packageModal.classList.remove("show");
+
+    document.body.style.overflow = "auto";
 }
 
-// BOOK BUTTON INSIDE MODAL
-function bookTour(tourName) {
-    closePackage();
-    const tourSelect = document.getElementById('tour');
-    if (tourSelect) {
-        tourSelect.value = tourName;
+
+/* =========================
+   CLICK OUTSIDE MODAL
+========================= */
+
+packageModal.addEventListener("click", function(event) {
+
+    if (event.target === packageModal) {
+
+        closePackage();
+
     }
-    window.location.href = '#booking';
-}
 
-// FORM SUBMISSION
-document.getElementById('bookingForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    alert('Thank you for booking! We will get back to you shortly.');
-    this.reset();
 });
 
-// CLOSE MODAL ON CLICK OUTSIDE
-window.onclick = function (event) {
-    const modal = document.getElementById('packageModal');
-    if (event.target === modal) {
+
+/* =========================
+   ESC KEY
+========================= */
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
         closePackage();
+
     }
-};
+
+});
+
+
+/* =========================
+   BOOK TOUR BUTTON
+========================= */
+
+function bookTour(tourName) {
+
+    const tourSelect =
+        document.getElementById("tour");
+
+    tourSelect.value = tourName;
+
+    closePackage();
+
+    document
+        .getElementById("booking")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+/* =========================
+   BOOKING FORM
+========================= */
+
+const bookingForm =
+    document.getElementById("bookingForm");
+
+
+bookingForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+
+    const tour =
+        document.getElementById("tour").value;
+
+    const date =
+        document.getElementById("date").value;
+
+    const guests =
+        document.getElementById("guests").value;
+
+    const name =
+        document.getElementById("name").value;
+
+    const email =
+        document.getElementById("email").value;
+
+    const phone =
+        document.getElementById("phone").value;
+
+    const pickup =
+        document.getElementById("pickup").value;
+
+    const message =
+        document.getElementById("message").value;
+
+
+    if (!tour || !date || !name || !email || !phone) {
+
+        alert(
+            "Please complete all required fields."
+        );
+
+        return;
+
+    }
+
+
+    alert(
+        "Thank you, " +
+        name +
+        "!\n\n" +
+        "Your booking request for " +
+        tour +
+        " on " +
+        date +
+        " has been received.\n\n" +
+        "We will contact you through your email or phone to confirm your booking."
+    );
+
+
+    console.log({
+
+        tour: tour,
+
+        date: date,
+
+        guests: guests,
+
+        name: name,
+
+        email: email,
+
+        phone: phone,
+
+        pickup: pickup,
+
+        message: message
+
+    });
+
+
+    bookingForm.reset();
+
+});
