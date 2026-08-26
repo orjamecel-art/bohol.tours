@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bohol Escape Tours | Countryside & Island Tours</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <span>🌴</span>
+        <strong>Bohol Escape Tours</strong>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#tours">Tours</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#booking" class="nav-book-btn">
+        Book Now
+    </a>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <span class="hero-small">
+            BOHOL • PHILIPPINES
+        </span>
+
+        <h1>
+            Discover Bohol,
+            <span>One Adventure</span>
+            at a Time.
+        </h1>
+
+        <p>
+            Explore the beauty of Bohol through countryside tours,
+            island hopping and Panglao adventures.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#booking" class="btn primary-btn">
+                Book Your Tour
+            </a>
+
+            <a href="#tours" class="btn outline-btn">
+                Explore Tours
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TOURS
+========================= -->
+
+<section id="tours" class="section">
+
+    <div class="section-heading">
+
+        <span>EXPLORE BOHOL</span>
+
+        <h2>
+            Choose Your Adventure
+        </h2>
+
+        <p>
+            Discover the best of Bohol with our local tour packages.
+        </p>
+
+    </div>
+
+
+    <div class="tour-packages">
+
+
+        <!-- =========================
+             COUNTRY SIDE TOUR
+        ========================= -->
+
+        <div class="package-card">
+
+            <div class="package-image">
+
+                <img
+                    src="Images/hills.jpg"
+                    alt="Chocolate Hills Bohol"
+                >
+
+                <span class="package-label">
+                    MOST POPULAR
+                </span>
+
+            </div>
+
+            <div class="package-body">
+
+                <span class="package-type">
+                    COUNTRYSIDE TOUR
+                </span>
+
+                <h3>
+                    Bohol Countryside Tour
+                </h3>
+
+                <p>
+                    Explore Bohol's famous countryside attractions,
+                    historical landmarks and natural wonders in one
+                    memorable day.
+                </p>
+
+                <div class="package-features">
+
+                    <span>📍 Multiple Attractions</span>
+                    <span>🚗 Comfortable Tour</span>
+                    <span>⏰ Full Day</span>
+
+                </div>
+
+                <button
+                    class="view-package"
+                    onclick="openPackage('countryside')"
+                >
+                    View Package
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             ISLAND HOPPING
+        ========================= -->
+
+        <div class="package-card">
+
+            <div class="package-image">
+
+                <img
+                    src="Images/island.png"
+                    alt="Balicasag Island"
+                >
+
+                <span class="package-label blue">
+                    ISLAND ADVENTURE
+                </span>
+
+            </div>
+
+            <div class="package-body">
+
+                <span class="package-type">
+                    ISLAND HOPPING
+                </span>
+
+                <h3>
+                    Balicasag & Virgin Island Tour
+                </h3>
+
+                <p>
+                    Enjoy crystal-clear waters, beautiful beaches,
+                    snorkeling and unforgettable island scenery.
+                </p>
+
+                <div class="package-features">
+
+                    <span>🏝️ Island Hopping</span>
+                    <span>🤿 Snorkeling</span>
+                    <span>🌊 Ocean Adventure</span>
+
+                </div>
+
+                <button
+                    class="view-package"
+                    onclick="openPackage('island')"
+                >
+                    View Package
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             PANGLAO TOUR
+        ========================= -->
+
+        <div class="package-card">
+
+            <div class="package-image">
+
+                <img
+                    src="Images/"
+                    alt="Panglao Bohol"
+                >
+
+                <span class="package-label orange">
+                    PANGLAO
+                </span>
+
+            </div>
+
+            <div class="package-body">
+
+                <span class="package-type">
+                    PANGLAO TOUR
+                </span>
+
+                <h3>
+                    Panglao Adventure Tour
+                </h3>
+
+                <p>
+                    Discover beautiful attractions around Panglao,
+                    including caves, beaches and other local
+                    destinations.
+                </p>
+
+                <div class="package-features">
+
+                    <span>📍 Panglao Attractions</span>
+                    <span>📸 Photo Stops</span>
+                    <span>🌴 Local Experience</span>
+
+                </div>
+
+                <button
+                    class="view-package"
+                    onclick="openPackage('panglao')"
+                >
+                    View Package
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PACKAGE MODAL
+========================= -->
+
+<div id="packageModal" class="modal">
+
+    <div class="modal-box">
+
+        <button
+            class="close-modal"
+            onclick="closePackage()"
+        >
+            ×
+        </button>
+
+
+        <!-- =========================
+             COUNTRYSIDE CONTENT
+        ========================= -->
+
+        <div id="countrysidePackage" class="package-details">
+
+            <span class="detail-label">
+                COUNTRYSIDE TOUR
+            </span>
+
+            <h2>
+                Bohol Countryside Tour
+            </h2>
+
+            <p class="detail-intro">
+                Explore Bohol's famous countryside attractions
+                and historic landmarks in one complete tour.
+            </p>
+
+
+            <h3 class="highlights-title">
+                Tour Highlights
+            </h3>
+
+
+            <div class="tour-highlights">
+
+
+                <!-- Chocolate Hills -->
+
+                <div class="highlight-card">
+
+                    <img
+                        src="Images/hills.jpg"
+                        alt="Chocolate Hills"
+                    >
+
+                    <div class="highlight-content">
+
+                        <h3>
+                            Chocolate Hills
+                        </h3>
+
+                        <p>
+                            Visit Bohol's iconic Chocolate Hills
+                            and enjoy the breathtaking panoramic view.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Baclayon Church -->
+
+                <div class="highlight-card">
+
+                    <img
+                        src="Images/church.jpg"
+                        alt="Baclayon Church"
+                    >
+
+                    <div class="highlight-content">
+
+                        <h3>
+                            Baclayon Church
+                        </h3>
+
+                        <p>
+                            Discover one of Bohol's historic churches
+                            and cultural landmarks.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Man Made Forest -->
+
+                <div class="highlight-card">
+
+                    <img
+                        src="Images/forest.jpg"
+                        alt="Bohol Man Made Forest"
+                    >
+
+                    <div class="highlight-content">
+
+                        <h3>
+                            Man-Made Forest
+                        </h3>
+
+                        <p>
+                            Drive through Bohol's beautiful
+                            mahogany forest and enjoy the cool scenery.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Tarsier -->
+
+                <div class="highlight-card">
+
+                    <img
+                        src="Images/tarsier.jpg"
+                        alt="Bohol Tarsier"
+                    >
+
+                    <div class="highlight-content">
+
+                        <h3>
+                            Tarsier Sanctuary
+                        </h3>
+
+                        <p>
+                            See Bohol's tiny native tarsiers in
+                            a protected natural environment.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Loboc River -->
+
+                <div class="highlight-card">
+
+                    <img
+                        src="Images/river.jpg"
+                        alt="Loboc River"
+                    >
+
+                    <div class="highlight-content">
+
+                        <h3>
+                            Loboc River
+                        </h3>
+
+                        <p>
+                            Enjoy the beautiful river scenery
+                            and surrounding countryside.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Blood Compact -->
+
+                <div class="highlight-card">
+
+                    <img
+                        src="Images/blood.jpg"
+                        alt="Blood Compact Shrine"
+                    >
+
+                    <div class="highlight-content">
+
+                        <h3>
+                            Blood Compact Shrine
+                        </h3>
+
+                        <p>
+                            Visit this historic Bohol landmark
+                            and enjoy the surrounding view.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="package-info">
+
+                <h3>
+                    Package Includes
+                </h3>
+
+                <ul>
+
+                    <li>✔ Local tour coordination</li>
+                    <li>✔ Comfortable transportation</li>
+                    <li>✔ Countryside attractions</li>
+                    <li>✔ Flexible itinerary</li>
+
+                </ul>
+
+            </div>
+
+
+            <button
+                class="book-package-btn"
+                onclick="bookTour('Bohol Countryside Tour')"
+            >
+                Book This Tour
+            </button>
+
+        </div>
+
+
+
+        <!-- =========================
+             ISLAND CONTENT
+        ========================= -->
+
+        <div id="islandPackage" class="package-details">
+
+            <span class="detail-label">
+                ISLAND HOPPING
+            </span>
+
+            <h2>
+                Balicasag & Virgin Island Tour
+            </h2>
+
+            <p class="detail-intro">
+                Explore the beautiful waters of Bohol with an
+                unforgettable island hopping adventure.
+            </p>
+
+
+            <h3 class="highlights-title">
+                Tour Highlights
+            </h3>
+
+
+            <div class="tour-highlights">
+
+
+                <!-- Balicasag -->
+
+                <div class="highlight-card">
+
+                    <img
+                        src="Images/balicasag.jpg"
+                        alt="Balicasag Island"
+                    >
+
+                    <div class="highlight-content">
+
+                        <h3>
+                            Balicasag Island
+                        </h3>
+
+                        <p>
+                            Experience crystal-clear waters,
+                            snorkeling and beautiful marine life
+                            around Balicasag Island.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Virgin Island -->
+
+                <div class="highlight-card">
+
+                    <img
+                        src="Images/virgin.jpg"
+                        alt="Virgin Island"
+                    >
+
+                    <div class="highlight-content">
+
+                        <h3>
+                            Virgin Island
+                        </h3>
+
+                        <p>
+                            Relax on the beautiful sandbar and
+                            enjoy the clear blue waters of Virgin Island.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="package-info">
+
+                <h3>
+                    Package Includes
+                </h3>
+
+                <ul>
+
+                    <li>✔ Island hopping adventure</li>
+                    <li>✔ Balicasag Island visit</li>
+                    <li>✔ Virgin Island visit</li>
+                    <li>✔ Snorkeling opportunity</li>
+
+                </ul>
+
+            </div>
+
+
+            <button
+                class="book-package-btn"
+                onclick="bookTour('Balicasag & Virgin Island Tour')"
+            >
+                Book This Tour
+            </button>
+
+        </div>
+
+
+
+        <!-- =========================
+             PANGLAO CONTENT
+        ========================= -->
+
+        <div id="panglaoPackage" class="package-details">
+
+            <span class="detail-label">
+                PANGLAO TOUR
+            </span>
+
+            <h2>
+                Panglao Adventure Tour
+            </h2>
+
+            <p class="detail-intro">
+                Discover beautiful tourist attractions around
+                Panglao and enjoy a relaxing local adventure.
+            </p>
+
+
+            <h3 class="highlights-title">
+                Tour Highlights
+            </h3>
+
+
+            <div class="tour-highlights">
+
+
+                <div class="highlight-card">
+
+                    <img
+                        src="Images/island.png"
+                        alt="Panglao Island"
+                    >
+
+                    <div class="highlight-content">
+
+                        <h3>
+                            Panglao Island
+                        </h3>
+
+                        <p>
+                            Explore the beautiful coastal scenery
+                            and relaxing atmosphere of Panglao.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="highlight-card">
+
+                    <img
+                        src="Images/island.png"
+                        alt="Panglao Attraction"
+                    >
+
+                    <div class="highlight-content">
+
+                        <h3>
+                            Panglao Attractions
+                        </h3>
+
+                        <p>
+                            Visit popular local attractions and
+                            enjoy memorable photo opportunities.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="package-info">
+
+                <h3>
+                    Package Includes
+                </h3>
+
+                <ul>
+
+                    <li>✔ Panglao tourist attractions</li>
+                    <li>✔ Local tour coordination</li>
+                    <li>✔ Photo stops</li>
+                    <li>✔ Flexible itinerary</li>
+
+                </ul>
+
+            </div>
+
+
+            <button
+                class="book-package-btn"
+                onclick="bookTour('Panglao Adventure Tour')"
+            >
+                Book This Tour
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     ABOUT WENG
+========================= -->
+
+<section id="about" class="about-section">
+
+    <div class="about-image">
+
+        <img
+            src="Images/weng.jpg"
+            alt="Weng - Owner and Local Tour Coordinator"
+        >
+
+    </div>
+
+
+    <div class="about-content">
+
+        <span>
+            MEET YOUR LOCAL TOUR HOST
+        </span>
+
+        <h2>
+            Experience Bohol Like a Local
+        </h2>
+
+        <p>
+            Bohol Escape Tours is a local tour business created
+            to help visitors explore the beauty of Bohol
+            comfortably and conveniently.
+        </p>
+
+        <p>
+            From countryside adventures to island hopping,
+            our goal is to create simple, enjoyable and
+            memorable Bohol experiences.
+        </p>
+
+
+        <div class="owner">
+
+            <div class="owner-avatar">
+                W
+            </div>
+
+            <div>
+                <strong>Weng</strong>
+                <small>
+                    Owner & Local Tour Coordinator
+                </small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     REVIEWS
+========================= -->
+
+<section id="reviews" class="reviews-section">
+
+    <div class="section-heading">
+
+        <span>GUEST EXPERIENCES</span>
+
+        <h2>
+            What Our Guests Say
+        </h2>
+
+    </div>
+
+
+    <div class="reviews-grid">
+
+
+        <div class="review-card">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "We had an amazing countryside tour.
+                The Chocolate Hills and tarsier experience
+                were unforgettable!"
+            </p>
+
+            <strong>
+                Maria & Family
+            </strong>
+
+            <small>
+                Countryside Tour Guest
+            </small>
+
+        </div>
+
+
+        <div class="review-card">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "Beautiful island hopping experience.
+                Balicasag was definitely our favorite."
+            </p>
+
+            <strong>
+                James & Friends
+            </strong>
+
+            <small>
+                Island Hopping Guest
+            </small>
+
+        </div>
+
+
+        <div class="review-card">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "Very friendly and easy to coordinate with.
+                We enjoyed exploring Bohol."
+            </p>
+
+            <strong>
+                Anna
+            </strong>
+
+            <small>
+                Bohol Tour Guest
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BOOKING
+========================= -->
+
+<section id="booking" class="booking-section">
+
+    <div class="booking-container">
+
+        <div class="booking-text">
+
+            <span>
+                PLAN YOUR BOHOL ADVENTURE
+            </span>
+
+            <h2>
+                Book Your Tour
+            </h2>
+
+            <p>
+                Choose your preferred tour and date.
+                We'll coordinate with you to confirm your booking.
+            </p>
+
+        </div>
+
+
+        <form
+            id="bookingForm"
+            class="booking-form"
+        >
+
+            <div class="form-group">
+
+                <label>
+                    Select Tour
+                </label>
+
+                <select id="tour" required>
+
+                    <option value="">
+                        Choose a tour
+                    </option>
+
+                    <option value="Bohol Countryside Tour">
+                        Bohol Countryside Tour
+                    </option>
+
+                    <option value="Balicasag & Virgin Island Tour">
+                        Balicasag & Virgin Island Tour
+                    </option>
+
+                    <option value="Panglao Adventure Tour">
+                        Panglao Adventure Tour
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>
+                        Preferred Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="date"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Number of Guests
+                    </label>
+
+                    <select id="guests">
+
+                        <option>1 Guest</option>
+                        <option>2 Guests</option>
+                        <option>3 Guests</option>
+                        <option>4 Guests</option>
+                        <option>5 Guests</option>
+                        <option>6+ Guests</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="your@email.com"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Contact Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Your contact number"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Pickup Location
+                </label>
+
+                <input
+                    type="text"
+                    id="pickup"
+                    placeholder="Hotel / Resort / Location"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Special Request
+                </label>
+
+                <textarea
+                    id="message"
+                    rows="4"
+                    placeholder="Tell us anything we should know..."
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="submit-booking"
+            >
+                Submit Booking Request
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact-section">
+
+    <div>
+
+        <span>
+            CONTACT US
+        </span>
+
+        <h2>
+            Ready to Explore Bohol?
+        </h2>
+
+        <p>
+            Send us a booking request and let's plan
+            your Bohol adventure.
+        </p>
+
+    </div>
+
+
+    <a
+        href="#booking"
+        class="btn primary-btn"
+    >
+        Book Your Tour
+    </a>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        🌴 Bohol Escape Tours
+    </div>
+
+    <p>
+        Countryside • Island Hopping • Panglao Tours
+    </p>
+
+    <p class="copyright">
+        © 2026 Bohol Escape Tours. All rights reserved.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
